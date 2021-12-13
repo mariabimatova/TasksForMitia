@@ -11,9 +11,16 @@
 
 
 def returnDigits(a):
-    # TODO: add implementation!
-    return None, None
+    num = str(a)
 
+    if (len(num)) != 2:
+        return None, None
+    else:
+        num_s = list(num)
+        for i in num_s:
+            return i
+            
+            
 
 d1, d2 = returnDigits(25)
 print(f"{d1} and {d2}")
