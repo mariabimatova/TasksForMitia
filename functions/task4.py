@@ -15,7 +15,17 @@ def printNumbersUntil(n):
         for i in a:
             if i != 0:
                 print (i)
+# Программа написана правильно но работает не самым лучшим образом.
+# Не нужно делать list(range(n+1))
+# Лучше писать range непосредственно в цикле for:
 
+# for i in range(n+1):
+
+# Программа написана правильно но работает не самым лучшим образом.
+# Не нужно делать list(range(n+1))
+# Лучше писать range непосредственно в цикле for:
+
+# for i in range(n+1):
 
 print("All numbers until 5:")
 printNumbersUntil(5)
