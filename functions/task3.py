@@ -22,6 +22,24 @@ def getNextDigit(num):
         a = 0
         return a
 
+# Хороший стиль такой: заводишь переменную для ответа. Возвращаешь ее один раз с помощью одного оператора return в конце
+
+# if num == 9:
+#    result = 0
+# else
+#    result = num+1
+# return result
+
+# Можно ещё вот так:
+# result = num + 1
+# if result > 9:
+#     result = 0
+# return result
+
+# Самое красивое математическое решение такое:
+# result = (num + 1) % 10
+# return result
+
     
 
 
