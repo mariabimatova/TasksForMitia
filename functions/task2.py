@@ -11,9 +11,15 @@
 
 
 def getLongerWord(w1, w2):
-    # ...
-    # return ...
-    return w1
+    a = len(w1)
+    b = len(w2)
+    if a>=b:
+        return w1
+    elif a==b:
+        return w1
+    else:
+        return w2   
+        
 
 
 # Testing:
