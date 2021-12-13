@@ -15,8 +15,14 @@
 
 
 def getNextDigit(num):
-    # TODO: add implementation here!
-    pass
+    if 0<=num<=8:
+        a = num +1
+        return a
+    elif num == 9:
+        a = 0
+        return a
+
+    
 
 
 numbers = [0, 7, 2, 9]
