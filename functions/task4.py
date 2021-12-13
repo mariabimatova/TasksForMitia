@@ -10,7 +10,11 @@
 
 
 def printNumbersUntil(n):
-    pass
+    if n>0:
+        a = list(range(n+1))
+        for i in a:
+            if i != 0:
+                print (i)
 
 
 print("All numbers until 5:")
