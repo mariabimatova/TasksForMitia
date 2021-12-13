@@ -11,9 +11,12 @@
 
 
 def isNumberEven(num):
-    # ...
-    # return ...
-    pass
+    if num % 2 == 0:
+        return "True"
+    else:
+        return "False"
+
+    
 
 
 a = int(input("Enter the number: "))
