@@ -12,18 +12,14 @@
 
 def returnDigits(a):
     num = str(a)
-    
-    if (len(num)) !=2:
+
+    if len(num) != 2:
         return None, None
     else:
-        for i in num:
-            b = num[0]
-            c = num[1]
-            return b,c
+        b = num[0]
+        c = num[1]
+        return b, c
 
-   
-    
-            
 
 d1, d2 = returnDigits(25)
 print(f"{d1} and {d2}")
