@@ -33,9 +33,9 @@
 '''
 
 class Person:
-    firstName = ""
-    lastName = ""
-    yearOfBirth =1978
+    firstName = None
+    lastName = None
+    yearOfBirth = None # 0
 
 p1 = Person()
 p1.firstName = "Petr" 
