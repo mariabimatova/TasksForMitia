@@ -30,37 +30,62 @@ isFemale() - возвращает False для женщин
 7. На GitHub создать Pull Request - от ветки class-task1 в ветку main
 
 '''
+
+
 class Person:
     firstName = None
     lastName = None
-    yearOfBirth = None # 0
+    yearOfBirth = None  # 0
     gender = None
 
-p1 = Person()
-p1.firstName = "Petr" 
-p1.lastName = "Ivanov"
-p1.yearOfBirth = 1992
-p1.gender = "(male)"
+    def isPersonMale(self):
+        if self.gender == "M":
+            return True
+        else:
+            return False
 
-p2 = Person()
-p2.firstName = "Maria" 
-p2.lastName = "Trofimova"
-p2.yearOfBirth = 1987
-p2.gender = "(female)"
-
-p3 = Person()
-p3.firstName = "Natalia" 
-p3.lastName = "Cerafimova"
-p3.yearOfBirth = 1970
-p3.gender = "(female)"
-
-print(f'{p1.firstName} {p1.lastName} {p1.gender} {p1.yearOfBirth} ')
-print(f'{p2.firstName} {p2.lastName} {p2.gender} {p2.yearOfBirth} ')
-print(f'{p3.firstName} {p3.lastName} {p3.gender} {p3.yearOfBirth} ')
 
 def isMale(self):
-        if self.gender == "(male)":
-            return True
+    if self.gender == "M":
+        return True
+    else:
+        return False
+
+
 def isFemale(self):
-        if self.genger == "(femal)":
-            return True
+    if self.gender == "F":
+        return True
+    else:
+        return False
+
+
+p1 = Person()
+p1.firstName = "Petr"
+p1.lastName = "Ivanov"
+p1.yearOfBirth = 1992
+p1.gender = "M"
+
+p2 = Person()
+p2.firstName = "Maria"
+p2.lastName = "Trofimova"
+p2.yearOfBirth = 1987
+p2.gender = "F"
+
+p3 = Person()
+p3.firstName = "Natalia"
+p3.lastName = "Cerafimova"
+p3.yearOfBirth = 1970
+p3.gender = "F"
+
+
+def output(p):
+    if p.isPersonMale():
+        a = "(муж)"
+    else:
+        a = "(жен)"
+    print(f'{p.firstName} {p.lastName} {a} {p.yearOfBirth} ')
+
+
+output(p1)
+output(p2)
+output(p3)
