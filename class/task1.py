@@ -31,3 +31,27 @@
 
 
 '''
+
+class Person:
+    firstName = ""
+    lastName = ""
+    yearOfBirth =1978
+
+p1 = Person()
+p1.firstName = "Petr" 
+p1.lastName = "Ivanov"
+p1.yearOfBirth = 1992
+
+p2 = Person()
+p2.firstName = "Maria" 
+p2.lastName = "Trofimova"
+p2.yearOfBirth = 1987
+
+p3 = Person()
+p3.firstName = "Natalia" 
+p3.lastName = "Cerafimova"
+p3.yearOfBirth = 1970
+
+print(f'{p1.firstName} {p1.lastName} {p1.yearOfBirth} ')
+print(f'{p2.firstName} {p2.lastName} {p2.yearOfBirth} ')
+print(f'{p3.firstName} {p3.lastName} {p3.yearOfBirth} ')
