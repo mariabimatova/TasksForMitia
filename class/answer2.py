@@ -30,3 +30,37 @@ isFemale() - возвращает False для женщин
 7. На GitHub создать Pull Request - от ветки class-task1 в ветку main
 
 '''
+class Person:
+    firstName = None
+    lastName = None
+    yearOfBirth = None # 0
+    gender = None
+
+p1 = Person()
+p1.firstName = "Petr" 
+p1.lastName = "Ivanov"
+p1.yearOfBirth = 1992
+p1.gender = "(male)"
+
+p2 = Person()
+p2.firstName = "Maria" 
+p2.lastName = "Trofimova"
+p2.yearOfBirth = 1987
+p2.gender = "(female)"
+
+p3 = Person()
+p3.firstName = "Natalia" 
+p3.lastName = "Cerafimova"
+p3.yearOfBirth = 1970
+p3.gender = "(female)"
+
+print(f'{p1.firstName} {p1.lastName} {p1.gender} {p1.yearOfBirth} ')
+print(f'{p2.firstName} {p2.lastName} {p2.gender} {p2.yearOfBirth} ')
+print(f'{p3.firstName} {p3.lastName} {p3.gender} {p3.yearOfBirth} ')
+
+def isMale(self):
+        if self.gender == "(male)":
+            return True
+def isFemale(self):
+        if self.genger == "(femal)":
+            return True
