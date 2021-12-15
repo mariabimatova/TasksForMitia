@@ -25,6 +25,7 @@
 
 6. На GitHub создать Pull Request - от ветки class-task1 в ветку mainclass Person:'''
 
+
 class Person:
     firstName = None
     lastName = None
@@ -42,20 +43,17 @@ class Person:
             return True
         else:
             return False
-   
-    def year(self):
-        y = 2021-self.yearOfBirth
+
+    def year(self, current_year):
+        y = current_year - self.yearOfBirth
         return y
 
-
-    
-
-def output(p):
-    if p.isPersonMale():
-        a = "(муж)"
-    else:
-        a = "(жен)"
-    print(f'{p.firstName} {p.lastName} {a} {p.yearOfBirth} ')
+    def output(self):
+        if self.isPersonMale():
+            a = "(муж)"
+        else:
+            a = "(жен)"
+        print(f'{self.firstName} {self.lastName} {a} {self.yearOfBirth} ')
 
 
 p1 = Person()
@@ -67,7 +65,7 @@ p1.gender = "M"
 p2 = Person()
 p2.firstName = "Maria"
 p2.lastName = "Trofimova"
-p2.yearOfBirth = 1987
+p2.yearOfBirth = 1997
 p2.gender = "F"
 
 p3 = Person()
@@ -76,18 +74,16 @@ p3.lastName = "Cerafimova"
 p3.yearOfBirth = 1970
 p3.gender = "F"
 
-output(p1)
-output(p2)
-output(p3)
+print("*** All people:")
+p1.output()
+p2.output()
+p3.output()
 
 people = [p1, p2, p3]
+cy = 2021  # current year
 
+print("*** Only young ladies")
 for i in people:
-    yy = i.year() 
-    if yy < 30:
-        output(i)
-
-
-    
-
-
+    yy = i.year(cy)
+    if yy < 30 and i.gender == "F":
+        i.output()
