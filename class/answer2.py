@@ -44,19 +44,19 @@ class Person:
         else:
             return False
 
+    def isFemale(self):
+        if self.gender == "F":
+            return True
+        else:
+            return False
 
-def isMale(self):
-    if self.gender == "M":
-        return True
+
+def output(p):
+    if p.isPersonMale():
+        a = "(муж)"
     else:
-        return False
-
-
-def isFemale(self):
-    if self.gender == "F":
-        return True
-    else:
-        return False
+        a = "(жен)"
+    print(f'{p.firstName} {p.lastName} {a} {p.yearOfBirth} ')
 
 
 p1 = Person()
@@ -76,15 +76,6 @@ p3.firstName = "Natalia"
 p3.lastName = "Cerafimova"
 p3.yearOfBirth = 1970
 p3.gender = "F"
-
-
-def output(p):
-    if p.isPersonMale():
-        a = "(муж)"
-    else:
-        a = "(жен)"
-    print(f'{p.firstName} {p.lastName} {a} {p.yearOfBirth} ')
-
 
 output(p1)
 output(p2)
