@@ -52,17 +52,15 @@ Petr, 'M', 25
 8. Продолжаем в задании 8.
 '''
 
+
 class Human():
     def __init__(self, name, gender, age):
         self.name = name
         self.gender = gender
         self.age = age
-    def output(self):
-        def __str__(self):
-            a = f"{self.name} {self.gender} {self.ag}"
-            return a
-            
 
+    def output(self):
+        print(f'{self.name},{self.gender},{self.age}')
 
 
 class Child (Human):
@@ -72,30 +70,36 @@ class Child (Human):
         self.father = father
 
 
-
-
 class Parent (Human):
-    def __init__(self, name, gender, age, children):
+    def __init__(self, name, gender, age, children=None):
         super().__init__(name, gender, age)
         self.children = children
 
-p1 = Parent(name = 'Zoya', gender = 'F', age =33, children=None)
-p2 = Parent(name = 'Boris', gender = 'M', age =28, children=None)
-p3 = Parent(name = 'Vladimir', gender = 'M', age =45, children=None)
-p4 = Parent(name = 'Olga', gender = 'F', age =41, children=None)
-p5 = Parent(name = 'Sveta', gender = 'F', age =42, children=None)
-p6 = Parent(name = 'Petr', gender = 'M', age =25, children=None)
 
-c1 = Child(name= "Anya", gender = "F", age = 3, mother = p1, father = p2)
-c2 = Child(name= "Polya", gender = "F", age = 8, mother = p3, father = p4)
-c3 = Child(name= "Misha", gender = "M", age = 12, mother = p5, father = p6)
+p1 = Parent(name='Zoya', gender='F', age=33)
+p2 = Parent(name='Boris', gender='M', age=28)
+p3 = Parent(name='Vladimir', gender='M', age=45)
+p4 = Parent(name='Olga', gender='F', age=41)
+p5 = Parent(name='Sveta', gender='F', age=42)
+p6 = Parent(name='Petr', gender='M', age=25)
 
-parent_list = [p1,p2,p3,p4,p5,p6]
-child_list = [c1,c2,c3]
+c1 = Child(name="Anya", gender="F", age=3, mother=p1, father=p2)
+c2 = Child(name="Polya", gender="F", age=8, mother=p3, father=p4)
+c3 = Child(name="Misha", gender="M", age=12, mother=p5, father=p6)
+
+parent_list = [p1, p2, p3, p4, p5, p6]
+child_list = [c1, c2, c3]
+
+for i in parent_list:
+    i.output()
+
+for i in child_list:
+    i.output()
 
 
-
-
-
-
-
+# print(p1.name,p1.gender,p1.age)
+# print(p2.name,p2.gender,p2.age)
+# print(p3.name,p3.gender,p3.age)
+# print(p4.name,p4.gender,p4.age)
+# print(p5.name,p5.gender,p5.age)
+# print(p6.name,p6.gender,p6.age)
