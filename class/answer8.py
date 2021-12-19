@@ -95,10 +95,10 @@ class Parent (Human):
     def output(self):
         if self.gender == "M":
             print(
-                f'father: {self.name},{self.gender},{self.age}, children: {self.children}')
+                f'father: {self.name},{self.age}, children: {self.children}')
         else:
             print(
-                f'mother: {self.name},{self.gender},{self.age}, children: {self.children}')
+                f'mother: {self.name},{self.age}, children: {self.children}')
 
 
 p1 = Parent(name='Zoya', gender='F', age=33, children="Anya")
