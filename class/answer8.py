@@ -88,7 +88,7 @@ class Child (Human):
 
 
 class Parent (Human):
-    def __init__(self, name, gender, age, children=None):
+    def __init__(self, name, gender, age, children=[]):
         super().__init__(name, gender, age)
         self.children = children
 
@@ -101,12 +101,12 @@ class Parent (Human):
                 f'mother: {self.name},{self.age}, children: {self.children}')
 
 
-p1 = Parent(name='Zoya', gender='F', age=33, children="Anya")
-p2 = Parent(name='Boris', gender='M', age=28, children="ANya")
-p3 = Parent(name='Vladimir', gender='M', age=45, children="Polya")
-p4 = Parent(name='Olga', gender='F', age=41, children="Polya")
-p5 = Parent(name='Sveta', gender='F', age=42, children="Misha")
-p6 = Parent(name='Petr', gender='M', age=25, children="Misha")
+p1 = Parent(name='Zoya', gender='F', age=33, children=["Anya"])
+p2 = Parent(name='Boris', gender='M', age=28, children=["Anya"])
+p3 = Parent(name='Vladimir', gender='M', age=45, children=["Polya"])
+p4 = Parent(name='Olga', gender='F', age=41, children=["Polya"])
+p5 = Parent(name='Sveta', gender='F', age=42, children=["Misha"])
+p6 = Parent(name='Petr', gender='M', age=25, children=["Misha"])
 
 c1 = Child(name="Anya", gender="F", age=3, mother="Zoya", father="Boris")
 c2 = Child(name="Polya", gender="F", age=8, mother="Olga", father="Vladimir")
@@ -114,7 +114,7 @@ c3 = Child(name="Misha", gender="M", age=12, mother="Sveta", father="Petr")
 
 parent_list = [p1, p2, p3, p4, p5, p6]
 child_list = [c1, c2, c3]
-parent_child_list = parent_list + child_list
+
 
 for i in parent_list:
     i.output()
