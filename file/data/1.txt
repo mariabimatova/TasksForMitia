@@ -1,0 +1,12 @@
+# This is data file
+# Lines starting with '#' are comments and should be ignored
+# Here we have pairs: <city> <country>
+Tomsk Russia
+Moscow Russia
+Milan Italy
+Bologna Italy
+Rome Italy
+New-York USA
+San-Francisco USA
+Seattle USA
+London UK

@@ -1,0 +1,26 @@
+Задание 7.
+Продолжение от задачи 6.
+
+Записать получившийся словарь из задания 6 в файл
+data/1_out.txt
+
+Вот словарь:
+{'Russia': ['Tomsk', 'Moscow'], 
+ 'Italy':['Milan', 'Bologna', 'Rome'], 
+ 'USA':['New-York', 'San-Francisco'],
+ 'UK':['London']
+}
+
+Файл должен выглядеть так:
+<страна>
+<город> <город>... <город>
+
+Например:
+Russia
+Tomsk Moscow
+Italy
+Milan Bologna Rome
+USA
+New-York San-Francisco
+UK
+London
