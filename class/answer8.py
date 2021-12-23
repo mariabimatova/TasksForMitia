@@ -88,22 +88,23 @@ class Child (Human):
 
 
 class Parent (Human):
-    def __init__(self, name, gender, age, children=[]):
+    def __init__(self, name, gender, age, children = []):
         super().__init__(name, gender, age)
-        self.children = children
+        self.children = []
 
     def output(self):
         if self.gender == "M":
-            print(
-                f'father: {self.name},{self.age}, children: {self.children}')
+            for ii in self.children:
+                return(ii)
+
+            print(f'father: {self.name},{self.age}, children: {ii}')
         else:
-            print(
-                f'mother: {self.name},{self.age}, children: {self.children}')
+            print(f'mother: {self.name},{self.age}, children: {ii}')
 
 
 p1 = Parent(name='Zoya', gender='F', age=33, children=["Anya"])
 p2 = Parent(name='Boris', gender='M', age=28, children=["Anya"])
-p3 = Parent(name='Vladimir', gender='M', age=45, children=["Polya"])
+p3 = Parent(name='Vladimir', gender='M', age=45, children=["Polya","Misha"])
 p4 = Parent(name='Olga', gender='F', age=41, children=["Polya"])
 p5 = Parent(name='Sveta', gender='F', age=42, children=["Misha"])
 p6 = Parent(name='Petr', gender='M', age=25, children=["Misha"])
@@ -121,3 +122,6 @@ for i in parent_list:
 
 for i in child_list:
     i.output()
+
+# for no, c in enumerate():
+#     print(c.name, end="")
