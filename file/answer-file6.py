@@ -17,6 +17,12 @@
  'UK':['London']
 }'''
 dict1 = {}
+for key,value in dict1.items():
+    value == []
+    
+
+
+
 with open('data/1.txt') as file:
     file.readline()
     file.readline()
@@ -25,7 +31,15 @@ with open('data/1.txt') as file:
     flist = ff.split()
     if flist[1] == "Russia":
         dict1.setdefault(flist[1],flist[0])
+    ff1 = file.readline()
+    flist1 = ff1.split()
+    if flist1[1] == "Russia":
+        
+        
 print(dict1)
+
+
+
 
 
 
