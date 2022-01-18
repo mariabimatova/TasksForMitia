@@ -10,33 +10,61 @@
 
 Вывести получившийся словарь на экран (порядок стран-городов внутри словаря не важен):
 
+File:
+=============================================================
+# This is data file
+# Lines starting with '#' are comments and should be ignored
+# Here we have pairs: <city> <country>
+Tomsk Russia
+Moscow Russia
+Milan Italy
+Bologna Italy
+Rome Italy
+New-York USA
+San-Francisco USA
+Seattle USA
+London UK
+=============================================================
+
 Ожидается результат
 {'Russia': ['Tomsk', 'Moscow'], 
  'Italy':['Milan', 'Bologna', 'Rome'], 
  'USA':['New-York', 'San-Francisco'],
  'UK':['London']
-}'''
+}
+'''
+
 dict1 = {}
-for key,value in dict1.items():
-    value == []
+
+def processLine(line):
+    flist = line.split()
+    city = flist[0]
+    country = flist[1]
     
-
-
+    if country in dict1:
+        cities = dict1[country]
+        cities.append(city)
+    else:
+        dict1[country] = [city]
+    
+def processLine2(line):
+    flist = line.split()
+    city = flist[0]
+    country = flist[1]
+    
+    dict1.setdefault(country, [])
+    cities = dict1[country]
+    cities.append(city)
 
 with open('data/1.txt') as file:
-    file.readline()
-    file.readline()
-    file.readline()
-    ff = file.readline()
-    flist = ff.split()
-    if flist[1] == "Russia":
-        dict1.setdefault(flist[1],flist[0])
-    ff1 = file.readline()
-    flist1 = ff1.split()
-    if flist1[1] == "Russia":
-        
-        
+    text = file.readlines()
+    for line in text:
+        if line[0] != "#":
+            processLine2(line)
+     
 print(dict1)
+
+
 
 
 
