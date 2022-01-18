@@ -36,39 +36,42 @@ London UK
 
 dict1 = {}
 
+
 def processLine(line):
+    # variant 1:
     flist = line.split()
     city = flist[0]
     country = flist[1]
-    
-    if country in dict1:
-        cities = dict1[country]
-        cities.append(city)
-    else:
-        dict1[country] = [city]
-    
+
+    # variant2: with unpacking
+    # city, country = line.split()
+
+    # setdefault()
+    if country not in dict1:
+        dict1[country] = []
+
+    cities = dict1[country]
+    cities.append(city)
+
+
 def processLine2(line):
     flist = line.split()
     city = flist[0]
     country = flist[1]
-    
+
     dict1.setdefault(country, [])
     cities = dict1[country]
     cities.append(city)
 
+
+# working with file
 with open('data/1.txt') as file:
     text = file.readlines()
-    for line in text:
-        if line[0] != "#":
-            processLine2(line)
-     
+
+# processing every line of the file
+for line in text:
+    if line[0] != "#":
+        processLine(line)
+
 print(dict1)
-
-
-
-
-
-
-
-
 
