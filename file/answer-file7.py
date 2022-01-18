@@ -27,18 +27,14 @@ UK
 London'''
 
 
-
-from turtle import fd
-
-
-fdict = {'Russia': ['Tomsk', 'Moscow'], 
- 'Italy':['Milan', 'Bologna', 'Rome'], 
- 'USA':['New-York', 'San-Francisco'],
- 'UK':['London']
-}
+fdict = {'Russia': ['Tomsk', 'Moscow'],
+         'Italy': ['Milan', 'Bologna', 'Rome'],
+         'USA': ['New-York', 'San-Francisco'],
+         'UK': ['London']
+         }
 
 lines = []
-for contry,cities in fdict.items():
+for contry, cities in fdict.items():
     lines.append(contry)
 
     # varian1: without <join>
@@ -53,11 +49,7 @@ for contry,cities in fdict.items():
     lines.append(s)
 
 # write lines one by one
-with open('data/1_out.txt','w') as document:
+with open('data/1_out.txt', 'w') as document:
     for n in lines:
         document.write(n)
         document.write('\n')
-
-
-  
- 
