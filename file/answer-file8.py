@@ -35,15 +35,9 @@ with open('data/1_out.txt') as f:
         line1 = f.readline()
         line2 = f.readline()
         if line1 not in fdict:
-            fdict[line1] = []
-            cities = fdict[line1]
-            cities.append(line2)
+            fdict[line1.strip()] = []
+            cities = fdict[line1.strip()]
+            cities.append(line2.strip())
         if not line1 or not line2:
-           break 
-
-
+            break
 print(fdict)
-
-
-
-    
