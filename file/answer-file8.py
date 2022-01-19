@@ -29,21 +29,20 @@ London
  'USA':['New-York', 'San-Francisco'],
  'UK':['London']
 }'''
-
+fdict = {}
 with open('data/1_out.txt') as f:
     while True:
         line1 = f.readline()
         line2 = f.readline()
-            
-        
-        if not line1 or not line2:
-           break 
-        fdict = {}
         if line1 not in fdict:
             fdict[line1] = []
             cities = fdict[line1]
             cities.append(line2)
-            print(fdict)
+        if not line1 or not line2:
+           break 
+
+
+print(fdict)
 
 
 
