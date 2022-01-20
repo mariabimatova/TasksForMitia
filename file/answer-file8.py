@@ -34,10 +34,13 @@ with open('data/1_out.txt') as f:
     while True:
         line1 = f.readline()
         line2 = f.readline()
-        if line1 not in fdict:
-            fdict[line1.strip()] = []
-            cities = fdict[line1.strip()]
-            cities.append(line2.strip())
-        if not line1 or not line2:
+        
+        if line1 == "" or line2 == "":
             break
+        line1 = line1.strip()
+        line2 = line2.strip()
+        cities = line2.split()
+        fdict[line1] = cities
+        
+        
 print(fdict)
