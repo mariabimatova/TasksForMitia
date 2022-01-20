@@ -38,15 +38,16 @@ for contry, cities in fdict.items():
     lines.append(contry)
 
     # varian1: without <join>
-    '''s = cities[0]
+    s = cities[0]
     for city in cities[1:]:
-        s = s + ' ' + city'''
+        s = s + ' ' + city
+    lines.append(s)
 
     # varian2: with special function <join>
-    space = ' '
-    s = space.join(cities)
+    # space = ' '
+    # s = space.join(cities)
 
-    lines.append(s)
+    # lines.append(s)
 
 # write lines one by one
 with open('data/1_out.txt', 'w') as document:
